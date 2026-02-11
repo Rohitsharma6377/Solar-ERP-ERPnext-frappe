@@ -1,0 +1,17 @@
+{
+  "doctype": "DocType",
+  "name": "Commission Rule",
+  "module": "Solar ERP",
+  "custom": 1,
+  "fields": [
+    {"fieldname": "rule_name", "label": "Rule Name", "fieldtype": "Data"},
+    {"fieldname": "role", "label": "Role", "fieldtype": "Select", "options": "Setter\nCloser\nProject Manager\nAccountant\nOther"},
+    {"fieldname": "is_percentage", "label": "Is Percentage", "fieldtype": "Check"},
+    {"fieldname": "value", "label": "Value", "fieldtype": "Float"},
+    {"fieldname": "conditions", "label": "Conditions (JSON)", "fieldtype": "Small Text"},
+    {"fieldname": "splits", "label": "Splits", "fieldtype": "Table", "options": "Commission Split"},
+    {"fieldname": "enabled", "label": "Enabled", "fieldtype": "Check"}
+  ],
+  "permissions": [{"role": "Administrator", "read": 1, "write": 1, "create": 1}],
+  "track_changes": 1
+}

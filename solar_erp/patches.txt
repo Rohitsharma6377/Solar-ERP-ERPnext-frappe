@@ -4,3 +4,7 @@
 
 [post_model_sync]
 # Patches added in this section will be executed after doctypes are migrated
+solar_erp.patches.add_solar_fields
+solar_erp.patches.create_workflows
+solar_erp.patches.roles_and_permissions
+solar_erp.patches.seed_example_data

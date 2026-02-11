@@ -1,0 +1,14 @@
+{
+  "doctype": "DocType",
+  "name": "Commission Split",
+  "module": "Solar ERP",
+  "custom": 1,
+  "istable": 1,
+  "fields": [
+    {"fieldname": "user", "label": "User", "fieldtype": "Link", "options": "User"},
+    {"fieldname": "share_percentage", "label": "Share Percentage", "fieldtype": "Float"},
+    {"fieldname": "share_amount", "label": "Share Amount", "fieldtype": "Currency"}
+  ],
+  "permissions": [{"role": "Administrator", "read": 1, "write": 1}],
+  "track_changes": 1
+}

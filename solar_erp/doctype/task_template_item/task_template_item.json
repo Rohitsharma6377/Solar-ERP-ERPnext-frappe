@@ -1,0 +1,14 @@
+{
+  "doctype": "DocType",
+  "name": "Task Template Item",
+  "module": "Solar ERP",
+  "custom": 1,
+  "istable": 1,
+  "fields": [
+    {"fieldname": "subject", "label": "Subject", "fieldtype": "Data"},
+    {"fieldname": "owner_role", "label": "Owner Role", "fieldtype": "Select", "options": "Setter\nCloser\nProject Manager\nAccountant\nOther"},
+    {"fieldname": "sequence", "label": "Sequence", "fieldtype": "Int"}
+  ],
+  "permissions": [{"role": "Administrator", "read": 1, "write": 1}],
+  "track_changes": 1
+}

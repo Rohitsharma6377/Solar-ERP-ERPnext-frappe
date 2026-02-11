@@ -247,3 +247,27 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+
+# Solar ERP: document events and scheduled tasks
+doc_events = {
+	"Opportunity": {
+		"on_update": "solar_erp.api.opportunity.on_update_opportunity",
+		"validate": "solar_erp.api.opportunity.validate_opportunity"
+	},
+	"Sales Order": {
+		"on_submit": "solar_erp.api.commission.on_sales_order_submit"
+	},
+	"Commission Record": {
+		"before_save": "solar_erp.doctype.commission_record.commission_record.validate_commission_permissions",
+		"on_update": "solar_erp.doctype.commission_record.commission_record.on_change_audit"
+	}
+}
+
+# Scheduler: retry SolarGraf failures hourly
+scheduler_events = {
+	"hourly": [
+		"solar_erp.tasks.retry_failed_solargraf_calls"
+	]
+}
+

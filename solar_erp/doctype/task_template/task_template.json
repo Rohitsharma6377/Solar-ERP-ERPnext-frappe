@@ -1,0 +1,12 @@
+{
+  "doctype": "DocType",
+  "name": "Task Template",
+  "module": "Solar ERP",
+  "custom": 1,
+  "fields": [
+    {"fieldname": "template_name", "label": "Template Name", "fieldtype": "Data"},
+    {"fieldname": "tasks", "label": "Tasks", "fieldtype": "Table", "options": "Task Template Item"}
+  ],
+  "permissions": [{"role": "Administrator", "read": 1, "write": 1}],
+  "track_changes": 1
+}
